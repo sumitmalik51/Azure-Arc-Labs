@@ -274,6 +274,7 @@ Optional initiatives to try… repeat the steps above to test some other policie
 ## Task 2: Tag your ARC server
 1.	Open the Azure portal page. Click on this link to go to the Azure ARC machine(s) you have built
 2.	Click on your machine that you want to tag
+![](./images/azure-arc-1881.png)
 
  
 3.	After clicking on it, Click on **Tags** in the center blade
