@@ -76,7 +76,10 @@ The Azure Activity Log provides insight into events that have occurred in Azure.
 
 	![](./images/lunchResourceGroup.png)
 
-2.	You will see one resource group like **Azure-ARC-170523**, where 170523 is unique id and it may be different for your lab environment. Select **Azure-ARC-170523** from resource groups.
+2.	You will see one resource group like **Azure-ARC-170523**, where 170523 is unique id and it may be different for your lab
+environment. Select **Azure-ARC-170523** from resource groups.
+
+   ![](./images/azure-arc-170523.png)
  
 
 3.	Now, select the Activity logs to check the activities of last few hours on this resource group.
