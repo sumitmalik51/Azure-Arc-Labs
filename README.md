@@ -47,23 +47,29 @@ In this exercise, you will walk through some of the Azure Governance capabilitie
 ## Task 1: Login to Azure Portal
 In this task, you will login to Azure using the lab credentials and browse through Azure Portal.
 1.	Navigate to  Azure Portal.
-	  ![](./images/screenshotname)
+
+	![](./images/azurePortal.png)
 
 2.	Login with Azure credentials Username and Password shown on Environment Details page. You can use copy icon to copy the values.
 
- 
+ 	![](./images/AzureCredentials.png)
 
 3.	Enter the Username value in **Email**, **phone** or **Skype** field, and select the **Next**. 
 
+	![](./images/logintoAzure.png)
+
 4.	Now, enter the **Password** value, and select **Sign in**.
- 
+
+  	![](./images/enterAzurePassword.png)
 
 5.	Once you select the Sign in and **Stay signed in?** popup will appear, select the **Yes** to continue.
  
+	![](./images/staySignInPopup.png)
 
 6.	You will see Welcome to Microsoft Azure popup windows once you signed into Azure. Select **Maybe later**.
  
-
+	![](./images/WelcomeToAzurePopup.png)
+	
 ## Task 2: Azure Activity Logs
 The Azure Activity Log provides insight into events that have occurred in Azure. In this task you will explore on Azure Activity Logs on the existing **resource group** in Azure. 
 1.	In your Azure portal, browse through the resource groups. From the navigate panel, select Resource groups.
