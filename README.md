@@ -211,33 +211,43 @@ In this task, we will connect the Linux machine to Azure Arc.
 cd C:\LabFiles\
 $ip = Read-Host -Prompt 'IP Address of Linux machine'
 .\ArcAgentLinux.bat $ip
+![](./images/azure-arc-1786.png)
 
  
 
 2.	These commands will open a putty session and login to the Linux machine and run the Azure Arc connect commands automatically. Once the machine is onboarded to Azure you can see the following message in putty terminal:
 info msg= “Successfully Onboarded Resource to Azure”
+![](./images/azure-arc-1787.png)
  
 
 ## Exercise 4: Azure Governance for Arc Connected Machine
 **Task 1: Apply Policy**
 1.	From the **Machine -Azure Arc** menu for the Hybrid Server you are working with, click on **Policies**
+![](./images/azure-arc-1788.png)
  
 2.	Click **Assign Initiative** 
+![](./images/azure-arc-1789.png)
  
 3.	To the right of **Basics** click on the ellipses (…) to the right of **Initiative definition**
+![](./images/azure-arc-1790.png)
  
 4.	In the **Search** window for available definitions, type “Time ” and select the one called **Show Audit results from Windows VMs that are not set to the specified time zone**.  Click the blue **Select** button below
+![](./images/azure-arc-1791.png)
  
 5.	Click **Next** at the bottom of the window.
+![](./images/azure-arc-1792.png)
  
 6.	From the **Time zone** drop down menu select **“(UTC) Coordinated Universal Time”**. Click **Next**
 7.	Read the description and then select the checkbox for **Create a remediation task**. This ensures that the policy will apply to existing resources after the policy is assigned.  If that box is not selected, then the policy only applies to newly created resources.
 8.	Select the **Create a Managed Identity** check box and the click **Next** again
+![](./images/azure-arc-1793.png)
  
 9.	Then at the bottom of the **Assign Policy** window click on **Create**.
+![](./images/azure-arc-1794.png)
  
 10.	Click on the new initiative just created **Audit Windows VMs that are not set to the specified time zone**
 11.	Click **Create a Remediation Task** at the top right.
+![](./images/azure-arc-1795.png)
 
  
 
