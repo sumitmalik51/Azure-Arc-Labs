@@ -87,6 +87,8 @@ environment. Select **Azure-ARC-170523** from resource groups.
   ![](./images/azure-arc-1705231.png)
 
 4.	Under Activity logs you can see *‘Write Azure Arc Machines’* action in **Succeeded8* state and this action is performed by ‘https://odl_user_sp_170523’. To check more details for this activity log, click on the activity log operation Name. You can go to the resource group overview and see one resource with resource type *‘Microsoft.HybridCompute’*.
+  ![](./images/microsofthybrid.png)
+
  
 ## Task 3: Manage Resources Tags
 You apply tags to your Azure resources, resource groups, and subscriptions to logically organize them into a taxonomy. Each tag consists of a name and a value pair. For example, you can apply the name "Environment" and the value "Production" to all the resources in production.
