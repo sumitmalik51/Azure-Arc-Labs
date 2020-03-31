@@ -108,17 +108,22 @@ You apply tags to your Azure resources, resource groups, and subscriptions to lo
 
 ## Task 4: Azure Policies
 Azure Policy is a service in Azure that you use to create, assign, and manage policies. These policies enforce different rules and effects over your resources, so those resources stay compliant with your corporate standards and service level agreements. Azure Policy meets this need by evaluating your resources for non-compliance with assigned policies. All data stored by Azure Policy is encrypted at rest.
-1.	Go to your resource group and click on the **Policies** under **Settings**. Click on **Compliance** and then check if there is any assignment on current scope. New policy assignments can be done through **Assign policy** and **Assign Initiative** options, Initiative can be a group of policies. Click on **Assign policy**  
+1.	Go to your resource group and click on the **Policies** under **Settings**. Click on **Compliance** and then check if there is any assignment on current scope. New policy assignments can be done through **Assign policy** and **Assign Initiative** options, Initiative can be a group of policies. Click on **Assign policy** 
+![](./images/azure-arc-1770.png)
+
 
  
 
 2.	On **Basics** tab, click on the three dot’s (ellipses) to select the existing policy definition.
+![](./images/azure-arc-1771.png)
  
 
 3.	Now, in **Search box** type **“Require a tag and its value on resource groups”** and click on the searched definition and then click on **Select**.
+![](./images/azure-arc-1772.png)
  
 
 4.	 Now, click on next to move on parameters tab.
+![](./images/azure-arc-1773.png)
  
 
 5.	Enter the following **Tag Name** and **Tag Value** in parameters and click on **Next**.
