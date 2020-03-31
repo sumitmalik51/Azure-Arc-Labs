@@ -1,12 +1,10 @@
-# Azure-Arc-Labs
-
-Exercise 1: Getting started with Azure Governance 
+# Exercise 1: Getting started with Azure Governance 
 
 In this exercise, you will walk through some of the Azure Governance capabilities including Azure Activity Logs, Resource tags and policies. In the first exercise we’ll be trying out these capabilities with Azure resources and then extend to Azure Arc later during the lab.  
-Task 1: Login to Azure Portal
+## Task 1: Login to Azure Portal
 In this task, you will login to Azure using the lab credentials and browse through Azure Portal.
 1.	Navigate to  Azure Portal.
- 
+	  ![](./images/screenshotname)
 
 2.	Login with Azure credentials Username and Password shown on Environment Details page. You can use copy icon to copy the values.
 
@@ -23,7 +21,7 @@ In this task, you will login to Azure using the lab credentials and browse throu
 6.	You will see Welcome to Microsoft Azure popup windows once you signed into Azure. Select Maybe later.
  
 
-Task 2: Azure Activity Logs
+## Task 2: Azure Activity Logs
 The Azure Activity Log provides insight into events that have occurred in Azure. In this task you will explore on Azure Activity Logs on the existing resource group in Azure. 
 1.	In your Azure portal, browse through the resource groups. From the navigate panel, select Resource groups.
  
