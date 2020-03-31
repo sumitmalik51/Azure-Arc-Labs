@@ -95,6 +95,8 @@ environment. Select **Azure-ARC-170523** from resource groups.
 You apply tags to your Azure resources, resource groups, and subscriptions to logically organize them into a taxonomy. Each tag consists of a name and a value pair. For example, you can apply the name "Environment" and the value "Production" to all the resources in production.
 1.	Basically, tags can be applied on Subscription, resource group and resources level. Wherever you want to apply the tag just click on that resource and from left menu blade click on the **Tag**.
 2.	In this task, we will apply Tag on resource group. Click on the Tag.
+
+  ![](./images/azure-arc-171289.png)
  
 
 3.	You will several **Tags** are already there; you can create new Tag, remove existing Tag and then Save them.
