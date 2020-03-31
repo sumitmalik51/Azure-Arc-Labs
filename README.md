@@ -285,6 +285,8 @@ CostCenter	IT
 Department	Central IT
 Owner 	<your name>
 5.	After saving them they should look like this…
+	
+![](./images/azure-arc-1885.png)
 
 
 
