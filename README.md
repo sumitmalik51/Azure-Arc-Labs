@@ -73,7 +73,7 @@ In this task, you will login to Azure using the lab credentials and browse throu
 ## Task 2: Azure Activity Logs
 The Azure Activity Log provides insight into events that have occurred in Azure. In this task you will explore on Azure Activity Logs on the existing **resource group** in Azure. 
 1.	In your Azure portal, browse through the resource groups. From the navigate panel, select Resource groups.
- 
+![](./images/lunchresorcegroup.png)
 
 2.	You will see one resource group like **Azure-ARC-170523**, where 170523 is unique id and it may be different for your lab environment. Select **Azure-ARC-170523** from resource groups.
  
