@@ -94,6 +94,8 @@ You apply tags to your Azure resources, resource groups, and subscriptions to lo
  
 
 3.	You will several **Tags** are already there; you can create new Tag, remove existing Tag and then Save them.
+        
+        ![](./images/azure-arc-1705231.png)
  
 
 ## Task 4: Azure Policies
