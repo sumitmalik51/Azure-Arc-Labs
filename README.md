@@ -155,9 +155,11 @@ In this lab, two on-prem servers one **windows**, and **Linux** are pre-connecte
 
 3.	Click on one of the pre-connected machines.
 ![](./images/azure-arc-1780.png)
+
  
 
 4.	From here, you can **manage** and **govern** your machines with **Manage access** and **Assess compliance**. You will explore on that next exercises.
+![](./images/azure-arc-1781.png)
  
 ## Exercise 3: Connect On-Prem Servers to Azure with Arc
 Azure Arc extends Azure Resource Manager capabilities to Linux and Windows servers, as well as Kubernetes clusters on any infrastructure across on-premises, multi-cloud, and edge. With Azure Arc, customers can also run Azure data services anywhere, realizing the benefits of cloud innovation, including always up-to-date data capabilities, deployment in seconds (rather than hours), and dynamic scalability on any infrastructure. Azure Arc for servers is currently in public preview.
@@ -166,14 +168,17 @@ Azure Arc extends Azure Resource Manager capabilities to Linux and Windows serve
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a virtual machine. Each *virtual machine* acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.
 In this task, you will walk through on-prem environment which is hosted on Hyper-V. You will find four virtual machines hosted on Hyper-V server.	
 1.	Find the ARC-Host VM details on lab details page:
+![](./images/azure-arc-1782.png)
  
 
 2.	Login to the ARC-Host VM using RDP connection.
 3.	Once you logged into the VM, launch the Hyper-V manager from the shortcut created on desktop. You’ll see total four virtual machines are running in Hyper-V. Two Windows VM and two Linux (Ubuntu) VM. **winvm-pre-connected** VM is already connected to Azure Arc, which you explored in earlier exercises on Azure portal.
+![](./images/azure-arc-1783.png)
 
  
 
 4.	You can check the private IP address of the VM by selecting the VM in Hyper-V manager and then click on Networking.
+![](./images/azure-arc-1784.png)
  
 
 ## Task 2: Connect a Windows Server Virtual Machine to Arc
@@ -189,6 +194,8 @@ We will use the 2nd method to connect our windows machine to Azure.
 cd C:\LabFiles\
 $ip = Read-Host -Prompt 'IP Address of Windows Server machine'
 .\ConnectWindowsServertoAzureArc.ps1 -WindowsServerIP $ip 
+![](./images/azure-arc-1785.png)
+
 
 
  
