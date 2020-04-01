@@ -7,9 +7,9 @@ This hands-on lab introduces readers to Azure Arc and includes walkthrough of se
 ## Table of Contents
 
 
-**Azure Arc: Hands-on Lab**                                                                     |1|	
+|**Azure Arc: Hands-on Lab**|---------------------------------------------------------------------|1|	
 
-|Exercise 1: Getting started with Azure Governance|                                               |2|
+|Exercise 1: Getting started with Azure Governance|---------------------------------------------- |2|
 
   |Task 1: Login to Azure Portal|                                                                 |2|
   
