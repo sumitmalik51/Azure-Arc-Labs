@@ -9,11 +9,11 @@ This hands-on lab introduces readers to Azure Arc and includes walkthrough of se
 
 **Azure Arc: Hands-on Lab**....................................................................	1
 
-|Exercise 1: Getting started with Azure Governance..............................................2|
+|Exercise 1: Getting started with Azure Governance|..............................................2
 
-  |Task 1: Login to Azure Portal.................................................................2|
+  |Task 1: Login to Azure Portal|................................................................2
   
-  |Task 2: Azure Activity Logs...................................................................5|
+  |Task 2: Azure Activity Logs|..................................................................5
 
   Task 3: Manage Resources Tags.................................................................6
 
