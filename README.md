@@ -11,35 +11,35 @@ This hands-on lab introduces readers to Azure Arc and includes walkthrough of se
 
 Exercise 1: Getting started with Azure Governance..............................................	2
 
-Task 1: Login to Azure Portal..................................................................	2
+  Task 1: Login to Azure Portal................................................................	2
+  
+  Task 2: Azure Activity Logs...................................................................5
 
-Task 2: Azure Activity Logs....................................................................	5
+  Task 3: Manage Resources Tags.................................................................6
 
-Task 3: Manage Resources Tags..................................................................	6
-
-Task 4: Azure Policies.........................................................................	7
+  Task 4: Azure Policies........................................................................7
 
 Exercise 2: Getting started with Azure Arc.....................................................	11
 
-Task 1: Browse through the Arc Connected machine in Azure Portal...............................	11
+  Task 1: Browse through the Arc Connected machine in Azure Portal..............................11
 
 Exercise 3: Connect On-Prem Servers to Azure with Arc..........................................	13
 
-Task 1: Login and become familiar with Hyper-V Infrastructure..................................	13
+  Task 1: Login and become familiar with Hyper-V Infrastructure.................................13
 
-Task 2: Connect a Windows Server Virtual Machine to Arc........................................	15
+  Task 2: Connect a Windows Server Virtual Machine to Arc.......................................15
 
-Task 3: Connect a Linux Virtual Machine to Arc.................................................	16
+  Task 3: Connect a Linux Virtual Machine to Arc................................................16
 
 Exercise 4: Azure Governance for Arc Connected Machine.........................................	16
 
-Task 1: Apply Policy...........................................................................	16
+  Task 1: Apply Policy...........................................................................16	
 
-Task 2: Tag your ARC server....................................................................	21
+  Task 2: Tag your ARC server....................................................................21	
 
-Task 3: Activity Logs..........................................................................	22
+  Task 3: Activity Logs..........................................................................22	
 
-Task 4: RBAC...................................................................................	22
+  Task 4: RBAC...................................................................................22	
 
 ## Exercise 1: Getting started with Azure Governance 
 
