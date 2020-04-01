@@ -63,15 +63,15 @@ The Azure Activity Log provides insight into events that have occurred in Azure.
 2.	You will see one resource group like **Azure-ARC-170523**, where 170523 is unique id and it may be different for your lab
 environment. Select **Azure-ARC-170523** from resource groups.
 
-	![](./images/azure-arc-170523.png) 
+![](./images/azure-arc-170523.png) 
 
 3.	Now, select the Activity logs to check the activities of last few hours on this resource group.
  
-	![](./images/azure-arc-1705231.png)
+![](./images/azure-arc-1705231.png)
 
 4.	Under Activity logs you can see *‘Write Azure Arc Machines’* action in **Succeeded8* state and this action is performed by ‘https://odl_user_sp_170523’. To check more details for this activity log, click on the activity log operation Name. You can go to the resource group overview and see one resource with resource type *‘Microsoft.HybridCompute’*.
 
-	![](./images/microsoftHybrid2.png)
+![](./images/microsoftHybrid2.png)
 
  
 ## Task 3: Manage Resources Tags
@@ -79,12 +79,12 @@ You apply tags to your Azure resources, resource groups, and subscriptions to lo
 1.	Basically, tags can be applied on Subscription, resource group and resources level. Wherever you want to apply the tag just click on that resource and from left menu blade click on the **Tag**.
 2.	In this task, we will apply Tag on resource group. Click on the Tag.
 
-        ![](./images/azure-arc-171289.png)
+    ![](./images/azure-arc-171289.png)
  
 
 3.	You will several **Tags** are already there; you can create new Tag, remove existing Tag and then Save them.
 
-        ![](./images/azure-arc-1712891.png)
+    ![](./images/azure-arc-1712891.png)
         
         
  
@@ -94,7 +94,7 @@ Azure Policy is a service in Azure that you use to create, assign, and manage po
 1.	Go to your resource group and click on the **Policies** under **Settings**. Click on **Compliance** and then check if there is any assignment on current scope. New policy assignments can be done through **Assign policy** and **Assign Initiative** options, Initiative can be a group of policies. Click on **Assign policy**
 
 
-        ![](./images/azure-arc-1770.png)
+     ![](./images/azure-arc-1770.png)
 
 
  
@@ -102,35 +102,35 @@ Azure Policy is a service in Azure that you use to create, assign, and manage po
 2.	On **Basics** tab, click on the three dot’s (ellipses) to select the existing policy definition.
 
 
-         ![](./images/azure-arc-1771.png)
+     ![](./images/azure-arc-1771.png)
  
 
 3.	Now, in **Search box** type **“Require a tag and its value on resource groups”** and click on the searched definition and then click on **Select**.
 
-         ![](./images/azure-arc-1772.png)
+     ![](./images/azure-arc-1772.png)
  
 
 4.	 Now, click on next to move on parameters tab.
 
-         ![](./images/azure-arc-1773.png)
+      ![](./images/azure-arc-1773.png)
  
 
 5.	Enter the following **Tag Name** and **Tag Value** in parameters and click on **Next**.
 •	Tag Name: Environment
 •	Tag Value: Lab
 
-         ![](./images/azure-arc-1775.png)
+  ![](./images/azure-arc-1775.png)
  
 
 6.	Leave all the values **default** on **Remediation** tab and click on the **Review + create**.
 
 
-         ![](./images/azure-arc-1776.png)
+  ![](./images/azure-arc-1776.png)
  
 
 7.	On **Review + create** tab click on the **Create** to create the policy assignment.
 
-         ![](./images/azure-arc-1777.png)
+  ![](./images/azure-arc-1777.png)
  
 ## Exercise 2: Getting started with Azure Arc
 In the provided lab environment, you would already have one Windows Server running on-prem in a Hyper-V machine connected through Arc. In this exercise, we’ll explore this pre-connected Azure Arc resources. 
