@@ -117,28 +117,36 @@ Azure Policy is a service in Azure that you use to create, assign, and manage po
  
 
 2.	On **Basics** tab, click on the three dot’s (ellipses) to select the existing policy definition.
+
+
 ![](./images/azure-arc-1771.png)
  
 
 3.	Now, in **Search box** type **“Require a tag and its value on resource groups”** and click on the searched definition and then click on **Select**.
+
 ![](./images/azure-arc-1772.png)
  
 
 4.	 Now, click on next to move on parameters tab.
+
 ![](./images/azure-arc-1773.png)
  
 
 5.	Enter the following **Tag Name** and **Tag Value** in parameters and click on **Next**.
 •	Tag Name: Environment
 •	Tag Value: Lab
+
 ![](./images/azure-arc-1775.png)
  
 
 6.	Leave all the values **default** on **Remediation** tab and click on the **Review + create**.
+
+
 ![](./images/azure-arc-1776.png)
  
 
 7.	On **Review + create** tab click on the **Create** to create the policy assignment.
+
 ![](./images/azure-arc-1777.png)
  
 ## Exercise 2: Getting started with Azure Arc
@@ -146,6 +154,7 @@ In the provided lab environment, you would already have one Windows Server runni
 ## Task 1: Browse through the Arc Connected machine in Azure Portal.
 In this lab, two on-prem servers one **windows**, and **Linux** are pre-connected to Azure Arc and you can access the pre-connected server and play around those. 
 1.	On Azure portal, search for Azure Arc from search box and then select the Machines – Azure Arc.
+
 ![](./images/azure-arc-1778.png)
  
 
