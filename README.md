@@ -250,8 +250,9 @@ info msg= “Successfully Onboarded Resource to Azure”
 
  12.	Confirm that the **Scope** is showing the correct Resource Group – should default to …/ARC
 
-	![](./images/azure-arc-1993.png)
-       o  Click on the **ellipses** …to the right to select all options to include the server as shown to the right
+        ![](./images/azure-arc-1993.png)
+       
+   o  Click on the **ellipses** …to the right to select all options to include the server as shown to the right
 
 
 13.	Select the Checkbox beneath **Re-evaulate resource compliance before remediating**
