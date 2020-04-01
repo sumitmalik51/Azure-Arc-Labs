@@ -13,13 +13,13 @@ Table of Contents
    - [Task 2: Azure Activity Logs](#task-2-azure-activity-logs)
    - [Task 3: Manage Resources Tags](#task-3-manage-resources-tags)
    - [Task 4: Azure Policies](#task-4-azure-policies)
-   - [Exercise 2: Getting started with Azure Arc](#exercise-2-getting-started-with-azure-arc)
-   -  [Task 1: Browse through the Arc Connected machine in Azure Portal](#browse-through-the-arc-connected-machine-in-azure-portal)
-   -  [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-with-arc)
+- [Exercise 2: Getting started with Azure Arc](#exercise-2-getting-started-with-azure-arc)
+   -  [Task 1: Browse through the Arc pre-connected machine in Azure Portal](#browse-through-the-arc-pre-connected-machine-in-azure-portal)
+-  [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-with-arc)
    -   [Task 1: Login and become familiar with Hyper-V Infrastructure](#login-and-become-familiar-with-hyper-v-infrastructure)
    -   [Task 2: Connect a Windows Server Virtual Machine to Arc](#connect-a-windows-server-virtual-machine-to-arc)
    -   [Task 3: Connect a Linux Virtual Machine to Arc](#connect-a-linux-virtual-machine-to-arc)
-   -  [Exercise 4: Azure Governance for Arc Connected Machine](#exercise-4-azure-governance-for-arc-connected-machine)
+-  [Exercise 4: Azure Governance for Arc Connected Machine](#exercise-4-azure-governance-for-arc-connected-machine)
    -   [Task 1: Apply Policy](#apply-policy)	
    -   [Task 2: Tag your ARC server](#tag-your-aRC-server)	
    -   [Task 3: Activity Logs](#activity-logs)	
@@ -110,55 +110,48 @@ Azure Policy is a service in Azure that you use to create, assign, and manage po
      ![](./images/azure-arc-1772.png)
  
 
-4.	 Now, click on next to move on parameters tab.
+4.	Now, click on next to move on parameters tab.
 
       ![](./images/azure-arc-1773.png)
  
 
 5.	Enter the following **Tag Name** and **Tag Value** in parameters and click on **Next**.
-•	Tag Name: Environment
-•	Tag Value: Lab
+	 • Tag Name: Environment
+	 • Tag Value: Lab
 
-  ![](./images/azure-arc-1775.png)
+  	![](./images/azure-arc-1775.png)
  
 
 6.	Leave all the values **default** on **Remediation** tab and click on the **Review + create**.
 
-
-  ![](./images/azure-arc-1776.png)
- 
+  	![](./images/azure-arc-1776.png)
 
 7.	On **Review + create** tab click on the **Create** to create the policy assignment.
 
-  ![](./images/azure-arc-1777.png)
+  	![](./images/azure-arc-1777.png)
  
 ## Exercise 2: Getting started with Azure Arc
 In the provided lab environment, you would already have one Windows Server running on-prem in a Hyper-V machine connected through Arc. In this exercise, we’ll explore this pre-connected Azure Arc resources. 
-## Task 1: Browse through the Arc Connected machine in Azure Portal.
+## Task 1: Browse through the Arc pre-connected machine in Azure Portal.
 In this lab, two on-prem servers one **windows**, and **Linux** are pre-connected to Azure Arc and you can access the pre-connected server and play around those. 
 1.	On Azure portal, search for Azure Arc from search box and then select the Machines – Azure Arc.
 
-![](./images/azure-arc-1778.png)
+	![](./images/azure-arc-1778.png)
  
 
 2.	You will see, following two machines are pre-connected
-•	pre-connected-ubuntu
-•	pre-connected-winvm
+	  • pre-connected-ubuntu
+	  • pre-connected-winvm
 
-![](./images/azure-arc-1779.png)
- 
+	![](./images/azure-arc-1779.png)
 
 3.	Click on one of the pre-connected machines.
 
-![](./images/azure-arc-1991.png)
-
-
- 
+	![](./images/azure-arc-1991.png) 
 
 4.	From here, you can **manage** and **govern** your machines with **Manage access** and **Assess compliance**. You will explore on that next exercises.
 
-![](./images/azure-arc-1781.png)
-
+	![](./images/azure-arc-1781.png)
  
 ## Exercise 3: Connect On-Prem Servers to Azure with Arc
 Azure Arc extends Azure Resource Manager capabilities to Linux and Windows servers, as well as Kubernetes clusters on any infrastructure across on-premises, multi-cloud, and edge. With Azure Arc, customers can also run Azure data services anywhere, realizing the benefits of cloud innovation, including always up-to-date data capabilities, deployment in seconds (rather than hours), and dynamic scalability on any infrastructure. Azure Arc for servers is currently in public preview.
@@ -168,106 +161,97 @@ Hyper-V is Microsoft's hardware virtualization product. It lets you create and r
 In this task, you will walk through on-prem environment which is hosted on Hyper-V. You will find four virtual machines hosted on Hyper-V server.	
 1.	Find the ARC-Host VM details on lab details page:
 
-![](./images/azure-arc-1782.png)
+	![](./images/azure-arc-1782.png)
  
 
 2.	Login to the ARC-Host VM using RDP connection.
 3.	Once you logged into the VM, launch the Hyper-V manager from the shortcut created on desktop. You’ll see total four virtual machines are running in Hyper-V. Two Windows VM and two Linux (Ubuntu) VM. **winvm-pre-connected** VM is already connected to Azure Arc, which you explored in earlier exercises on Azure portal.
 
-![](./images/azure-arc-1783.png)
+	![](./images/azure-arc-1783.png)
 
- 
+ 4.	You can check the private IP address of the VM by selecting the VM in Hyper-V manager and then click on Networking.
 
-4.	You can check the private IP address of the VM by selecting the VM in Hyper-V manager and then click on Networking.
-
-![](./images/azure-arc-1784.png)
- 
+	![](./images/azure-arc-1784.png) 
 
 ## Task 2: Connect a Windows Server Virtual Machine to Arc
 Azure Arc for servers (preview) allows you to manage your Windows and Linux machines hosted outside of Azure on your corporate network or other cloud provider, similarly to how you manage native Azure virtual machines. When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a Resource ID, is managed as part of a resource group inside a subscription, and benefits from standard Azure constructs such as Azure Policy and applying tags.
 In this task, you will connect the windows server machine to Azure ARC. There are multiple ways to do this.
-•	Connect Machines to Azure Arc from Azure portal.
-•	Connect Machines at scale using a service principle
-•	Connect machines to Azure Arc with PowerShell DSC
+  • Connect Machines to Azure Arc from Azure portal.
+  • Connect Machines at scale using a service principle
+  • Connect machines to Azure Arc with PowerShell DSC
 We will use the 2nd method to connect our windows machine to Azure.
 1.	Launch Windows PowerShell from desktop shortcut.
 2.	Run the following commands, it will execute the ConnectWindowsServertoAzureArc.ps1 script. Enter **WinVm** private IP when it will prompt for IP Address of **‘windows server machine’**. You can get it with same approach shown in task 1. 
+```
+	cd C:\LabFiles\
+	$ip = Read-Host -Prompt 'IP Address of Windows Server machine'
+	.\ConnectWindowsServertoAzureArc.ps1 -WindowsServerIP $ip
+```
+   
+   ![](./images/azure-arc-1785.png)
 
-cd C:\LabFiles\
-$ip = Read-Host -Prompt 'IP Address of Windows Server machine'
-.\ConnectWindowsServertoAzureArc.ps1 -WindowsServerIP $ip
-
-![](./images/azure-arc-1785.png)
-
-
-
- 
-3.	ConnectWindowsServertoAzureArc.ps1 is getting following values from C:\LabFiles\creds.txt file and storing that to variables. You can review the script to understand it in depth.
-•	Azure service principle ID
-•	App Secret
-•	Resource group name
-•	Subscription and tenant id
+3. ConnectWindowsServertoAzureArc.ps1 is getting following values from C:\LabFiles\creds.txt file and storing that to variables. You can review the script to understand it in depth.
+     •	Azure service principle ID
+     •	App Secret
+     •	Resource group name
+     •	Subscription and tenant id
 After getting these values, it is creating pscredential to login in Azure PowerShell using service principle and then, creating a script block to run that block inside the Hyper-V machine. Script block will install the Arc agent package inside vm and connect with Azure Arc. Script block is getting executed remotely with Invoke command from ARC-Host vm with computer name/private ip of WinVm.
 ## Task 3: Connect a Linux Virtual Machine to Arc
 In this task, we will connect the Linux machine to Azure Arc. 
 1.	Open windows PowerShell and run the following command and pass the Linux vm ip in prompt
-cd C:\LabFiles\
-$ip = Read-Host -Prompt 'IP Address of Linux machine'
-.\ArcAgentLinux.bat $ip
-
+```
+	cd C:\LabFiles\
+	$ip = Read-Host -Prompt 'IP Address of Linux machine'
+	.\ArcAgentLinux.bat $ip
+```
 ![](./images/azure-arc-1786.png)
-
- 
 
 2.	These commands will open a putty session and login to the Linux machine and run the Azure Arc connect commands automatically. Once the machine is onboarded to Azure you can see the following message in putty terminal:
 info msg= “Successfully Onboarded Resource to Azure”
 
 ![](./images/azure-arc-1787.png)
  
-
 ## Exercise 4: Azure Governance for Arc Connected Machine
 **Task 1: Apply Policy**
 1.	From the **Machine -Azure Arc** menu for the Hybrid Server you are working with, click on **Policies**
 
-![](./images/azure-arc-1788.png)
+	![](./images/azure-arc-1788.png)
  
 2.	Click **Assign Initiative**
 
-![](./images/azure-arc-1789.png)
+	![](./images/azure-arc-1789.png)
  
 3.	To the right of **Basics** click on the ellipses (…) to the right of **Initiative definition**
 
-![](./images/azure-arc-1790.png)
+	![](./images/azure-arc-1790.png)
  
 4.	In the **Search** window for available definitions, type “Time ” and select the one called **Show Audit results from Windows VMs that are not set to the specified time zone**.  Click the blue **Select** button below
 
-![](./images/azure-arc-1791.png)
+	![](./images/azure-arc-1791.png)
  
 5.	Click **Next** at the bottom of the window.
 
-![](./images/azure-arc-1792.png)
+	![](./images/azure-arc-1792.png)
  
 6.	From the **Time zone** drop down menu select **“(UTC) Coordinated Universal Time”**. Click **Next**
 7.	Read the description and then select the checkbox for **Create a remediation task**. This ensures that the policy will apply to existing resources after the policy is assigned.  If that box is not selected, then the policy only applies to newly created resources.
 8.	Select the **Create a Managed Identity** check box and the click **Next** again
 
-![](./images/azure-arc-1793.png)
+	![](./images/azure-arc-1793.png)
  
 9.	Then at the bottom of the **Assign Policy** window click on **Create**.
 
-![](./images/azure-arc-1994.png)
+	![](./images/azure-arc-1994.png)
  
 10.	Click on the new initiative just created **Audit Windows VMs that are not set to the specified time zone**
 11.	Click **Create a Remediation Task** at the top right.
 
-![](./images/azure-arc-1992.png)
+	![](./images/azure-arc-1992.png)
 
- 
+ 12.	Confirm that the **Scope** is showing the correct Resource Group – should default to …/ARC
 
-12.	Confirm that the **Scope** is showing the correct Resource Group – should default to …/ARC
-
-![](./images/azure-arc-1993.png)
-o	Click on the **ellipses** …to the right to select all options to include the server as shown to the right
+	![](./images/azure-arc-1993.png)
+       o  Click on the **ellipses** …to the right to select all options to include the server as shown to the right
 
 
 13.	Select the Checkbox beneath **Re-evaulate resource compliance before remediating**
@@ -290,8 +274,7 @@ Optional initiatives to try… repeat the steps above to test some other policie
 1.	Open the Azure portal page. Click on this link to go to the Azure ARC machine(s) you have built
 2.	Click on your machine that you want to tag
 
-![](./images/azure-arc-1881.png)
-
+	![](./images/azure-arc-1881.png)
  
 3.	After clicking on it, Click on **Tags** in the center blade
 4.	Create the following tags and then Save them
@@ -302,14 +285,7 @@ Department	Central IT
 Owner 	<your name>
 5.	After saving them they should look like this…
 	
-![](./images/azure-arc-1885.png)
-
-
-
-
-	
-
-
+	![](./images/azure-arc-1885.png)
 
 ## Task 3: Activity Logs
 ## Task 4: RBAC
