@@ -277,11 +277,13 @@ info msg= “Successfully Onboarded Resource to Azure”
 10.	Click on the new initiative just created **Audit Windows VMs that are not set to the specified time zone**
 11.	Click **Create a Remediation Task** at the top right.
 
-![](./images/azure-arc-1795.png)
+![](./images/azure-arc-1992.png)
 
  
 
 12.	Confirm that the **Scope** is showing the correct Resource Group – should default to …/ARC
+
+![](./images/azure-arc-1993.png)
 o	Click on the **ellipses** …to the right to select all options to include the server as shown to the right
 
 
