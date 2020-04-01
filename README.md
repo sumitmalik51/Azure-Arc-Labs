@@ -8,19 +8,14 @@ This hands-on lab introduces readers to Azure Arc and includes walkthrough of se
 Table of Contents
 =================	
 
-[Exercise 1: Getting started with Azure Governance](#Exercise-1)
+- [Exercise 1: Getting started with Azure Governance](#exercise-1-getting-started-with-azure-governance)
+   - [Task 1: Login to Azure Portal](#task-1-login-to-azure-portal)  
+   - [Task 2: Azure Activity Logs](#task-2-azure-activity-logs)
+   - [Task 3: Manage Resources Tags](#task-3-manage-resources-tags)
+   - [Task 4: Azure Policies](#task-4-azure-policies)
+- [Exercise 2: Getting started with Azure Arc](#exercise-2-getting-started-with-azure-arc)
 
-  |Task 1: Login to Azure Portal|                                                                 |2|
-  
-  |Task 2: Azure Activity Logs|                                                                   |5|
-
-  |Task 3: Manage Resources Tags|                                                                 |6|
-
-  |Task 4: Azure Policies|                                                                        |7| 
-
-Exercise 2: Getting started with Azure Arc	                                                11
-
-  Task 1: Browse through the Arc Connected machine in Azure Portal..............................11
+Task 1: Browse through the Arc Connected machine in Azure Portal..............................11
 
 Exercise 3: Connect On-Prem Servers to Azure with Arc..........................................	13
 
