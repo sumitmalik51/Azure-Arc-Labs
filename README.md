@@ -4,12 +4,11 @@
 For customers who want to simplify complex and distributed environments across on-premises, edge and multi-cloud, Azure Arc enables deployment of Azure services anywhere and extends Azure management to any infrastructure.
 
 This hands-on lab introduces readers to Azure Arc and includes walkthrough of setup and management of connected scenarios through Azure Arc.
-## Table of Contents
 
+Table of Contents
+=================	
 
-|**Azure Arc: Hands-on Lab**|---------------------------------------------------------------------|1|	
-
-|Exercise 1: Getting started with Azure Governance|---------------------------------------------- |2|
+* [Exercise 1: Getting started with Azure Governance](#Exercise 1: Getting started with Azure Governance)
 
   |Task 1: Login to Azure Portal|                                                                 |2|
   
