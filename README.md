@@ -8,7 +8,7 @@ This hands-on lab introduces readers to Azure Arc and includes walkthrough of se
 Table of Contents
 =================	
 
-* [Exercise 1: Getting started with Azure Governance](#Exercise 1: Getting started with Azure Governance)
+[Exercise 1: Getting started with Azure Governance](#Exercise-1)
 
   |Task 1: Login to Azure Portal|                                                                 |2|
   
