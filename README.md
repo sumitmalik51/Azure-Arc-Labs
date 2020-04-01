@@ -272,7 +272,7 @@ info msg= “Successfully Onboarded Resource to Azure”
  
 9.	Then at the bottom of the **Assign Policy** window click on **Create**.
 
-![](./images/azure-arc-1794.png)
+![](./images/azure-arc-1994.png)
  
 10.	Click on the new initiative just created **Audit Windows VMs that are not set to the specified time zone**
 11.	Click **Create a Remediation Task** at the top right.
