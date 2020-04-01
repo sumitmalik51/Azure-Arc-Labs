@@ -73,16 +73,15 @@ The Azure Activity Log provides insight into events that have occurred in Azure.
 2.	You will see one resource group like **Azure-ARC-170523**, where 170523 is unique id and it may be different for your lab
 environment. Select **Azure-ARC-170523** from resource groups.
 
-   ![](./images/azure-arc-170523.png)
- 
+	![](./images/azure-arc-170523.png) 
 
 3.	Now, select the Activity logs to check the activities of last few hours on this resource group.
  
-  ![](./images/azure-arc-1705231.png)
+	![](./images/azure-arc-1705231.png)
 
 4.	Under Activity logs you can see *‘Write Azure Arc Machines’* action in **Succeeded8* state and this action is performed by ‘https://odl_user_sp_170523’. To check more details for this activity log, click on the activity log operation Name. You can go to the resource group overview and see one resource with resource type *‘Microsoft.HybridCompute’*.
 
-![](./images/microsoftHybrid2.png)
+	![](./images/microsoftHybrid2.png)
 
  
 ## Task 3: Manage Resources Tags
