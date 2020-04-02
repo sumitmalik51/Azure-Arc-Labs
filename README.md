@@ -216,7 +216,44 @@ info msg= “Successfully Onboarded Resource to Azure”
 ![](./images/azure-arc-1332.png)
  
 ## Exercise 4: Azure Governance for Arc Connected Machine
-**Task 1: Apply Policy**
+# Task 1: RBAC + Security
+# Theory of least permission
+Security best practices specify that a user should be given the lowest permission level needed to perform her or his job. As an example, in the previous section a service principal is used for bulk onboarding of servers. The service principal is given ‘Hybrid Server Onboarding’ permission which is limited to onboarding ARC servers. A new user named Auditor has been added and tasked with periodically checking policy compliance. This user only needs read access to a specific set of resource types.
+# Custom role
+1.	Save the role definition as ServerAuditor.json to C:\LabFiles directory in ARCHOST VM. You can use Visual studio code or notepad to edit and save the file. Provide the Subscription Id and resourceGroupsName of your lab environment in following custom role definition. You can get the values on lab details page.
+
+
+
+{
+    "Actions": [
+        "Microsoft.Authorization/policyassignments/read",
+        "Microsoft.Authorization/policydefinitions/read",
+        "Microsoft.Authorization/policysetdefinitions/read",
+        "Microsoft.Compute/virtualMachines/read",
+        "Microsoft.HybridCompute/machines/read",
+        "Microsoft.PolicyInsights/*/read"
+    ],
+    "AssignableScopes": [
+        "/subscriptions/<Subscription Id>/resourceGroups/<resourceGroupsName>"
+    ],
+    "Description": "Can audit server compliance.",
+    "Name": "Server Auditor"
+}
+	2.	Once you save the file, it will look like below.
+	
+	3.	Run the PowerShell commands to create a role definition.
+	
+
+	
+
+
+
+
+
+
+
+
+# Task 1: Apply Policy
 1.	From the **Machine -Azure Arc** menu for the Hybrid Server you are working with, click on **Policies**
 
 	![](./images/azure-arc-1788.png)
