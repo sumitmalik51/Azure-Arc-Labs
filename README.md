@@ -8,18 +8,18 @@ This hands-on lab introduces readers to Azure Arc and includes walkthrough of se
 Table of Contents
 =================	
 
-- [Exercise 1: Getting started with Azure Governance](#exercise-1-getting-started-with-azure-governance)
+   - [Exercise 1: Getting started with Azure Governance](#exercise-1-getting-started-with-azure-governance)
    - [Task 1: Login to Azure Portal](#task-1-login-to-azure-portal)  
    - [Task 2: Azure Activity Logs](#task-2-azure-activity-logs)
    - [Task 3: Manage Resources Tags](#task-3-manage-resources-tags)
    - [Task 4: Azure Policies](#task-4-azure-policies)
    - [Exercise 2: Getting started with Azure Arc](#exercise-2-getting-started-with-azure-arc)
-   -  [Task 1: Browse through the Arc pre-connected machine in Azure Portal](#task-1-browse-through-the-arc-pre-connected-machine-in-azure-portal)
--  [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-with-arc)
+   - [Task 1: Browse through the Arc pre-connected machine in Azure Portal](#task-1-browse-through-the-arc-pre-connected-machine-in-azure-portal)
+   -   [Exercise 3: Connect On-Prem Servers to Azure with Arc](#exercise-3-connect-on-prem-servers-to-azure-with-arc)
    -   [Task 1: Login and become familiar with Hyper-V Infrastructure](#task-1-login-and-become-familiar-with-hyper-v-infrastructure)
    -   [Task 2: Connect a Windows Server Virtual Machine to Arc](#task-2-connect-a-windows-server-virtual-machine-to-arc)
    -   [Task 3: Connect a Linux Virtual Machine to Arc](#task-3-connect-a-linux-virtual-machine-to-arc)
--  [Exercise 4: Azure Governance for Arc Connected Machine](#exercise-4-azure-governance-for-arc-connected-machine)
+   -   [Exercise 4: Azure Governance for Arc Connected Machine](#exercise-4-azure-governance-for-arc-connected-machine)
    -   [Task 1: Apply Policy](#task-1-apply-policy)	
    -   [Task 2: Tag your ARC server](#task-2-tag-your-aRC-server)	
    -   [Task 3: Activity Logs](#task-3-activity-logs)	
@@ -58,20 +58,20 @@ In this task, you will login to Azure using the lab credentials and browse throu
 The Azure Activity Log provides insight into events that have occurred in Azure. In this task you will explore on Azure Activity Logs on the existing **resource group** in Azure. 
 1.	In your Azure portal, browse through the resource groups. From the navigate panel, select Resource groups.
 
-	![](./images/lunchResourceGroup.png)
+ ![](./images/lunchResourceGroup.png)
 
 2.	You will see one resource group like **Azure-ARC-170523**, where 170523 is unique id and it may be different for your lab
 environment. Select **Azure-ARC-170523** from resource groups.
 
-![](./images/azure-arc-170523.png) 
+  ![](./images/azure-arc-170523.png) 
 
 3.	Now, select the Activity logs to check the activities of last few hours on this resource group.
  
-![](./images/azure-arc-1705231.png)
+  ![](./images/azure-arc-1705231.png)
 
 4.	Under Activity logs you can see *‘Write Azure Arc Machines’* action in **Succeeded8* state and this action is performed by ‘https://odl_user_sp_170523’. To check more details for this activity log, click on the activity log operation Name. You can go to the resource group overview and see one resource with resource type *‘Microsoft.HybridCompute’*.
 
-![](./images/microsoftHybrid2.png)
+  ![](./images/microsoftHybrid2.png)
 
  
 ## Task 3: Manage Resources Tags
@@ -79,12 +79,12 @@ You apply tags to your Azure resources, resource groups, and subscriptions to lo
 1.	Basically, tags can be applied on Subscription, resource group and resources level. Wherever you want to apply the tag just click on that resource and from left menu blade click on the **Tag**.
 2.	In this task, we will apply Tag on resource group. Click on the Tag.
 
-    ![](./images/azure-arc-171289.png)
+   ![](./images/azure-arc-171289.png)
  
 
 3.	You will several **Tags** are already there; you can create new Tag, remove existing Tag and then Save them.
 
-    ![](./images/azure-arc-1712891.png)
+  ![](./images/azure-arc-1712891.png)
         
         
  
@@ -94,7 +94,7 @@ Azure Policy is a service in Azure that you use to create, assign, and manage po
 1.	Go to your resource group and click on the **Policies** under **Settings**. Click on **Compliance** and then check if there is any assignment on current scope. New policy assignments can be done through **Assign policy** and **Assign Initiative** options, Initiative can be a group of policies. Click on **Assign policy**
 
 
-     ![](./images/azure-arc-1770.png)
+  ![](./images/azure-arc-1770.png)
 
 
  
@@ -102,33 +102,34 @@ Azure Policy is a service in Azure that you use to create, assign, and manage po
 2.	On **Basics** tab, click on the three dot’s (ellipses) to select the existing policy definition.
 
 
-     ![](./images/azure-arc-1771.png)
+ ![](./images/azure-arc-1771.png)
  
 
 3.	Now, in **Search box** type **“Require a tag and its value on resource groups”** and click on the searched definition and then click on **Select**.
 
-     ![](./images/azure-arc-1772.png)
+ ![](./images/azure-arc-1772.png)
  
 
 4.	Now, click on next to move on parameters tab.
 
-      ![](./images/azure-arc-1773.png)
+![](./images/azure-arc-1773.png)
  
 
 5.	Enter the following **Tag Name** and **Tag Value** in parameters and click on **Next**.
 	 • Tag Name: Environment
 	 • Tag Value: Lab
 
-  	![](./images/azure-arc-1775.png)
+
+![](./images/azure-arc-1775.png)
  
 
 6.	Leave all the values **default** on **Remediation** tab and click on the **Review + create**.
 
-  	![](./images/azure-arc-1776.png)
+![](./images/azure-arc-1776.png)
 
 7.	On **Review + create** tab click on the **Create** to create the policy assignment.
 
-  	![](./images/azure-arc-1777.png)
+![](./images/azure-arc-1777.png)
  
 ## Exercise 2: Getting started with Azure Arc
 In the provided lab environment, you would already have one Windows Server running on-prem in a Hyper-V machine connected through Arc. In this exercise, we’ll explore this pre-connected Azure Arc resources. 
@@ -136,18 +137,18 @@ In the provided lab environment, you would already have one Windows Server runni
 In this lab, two on-prem servers one **windows**, and **Linux** are pre-connected to Azure Arc and you can access the pre-connected server and play around those. 
 1.	On Azure portal, search for Azure Arc from search box and then select the Machines – Azure Arc.
 
-	![](./images/azure-arc-1778.png)
+      ![](./images/azure-arc-1778.png) 
  
 
 2.	You will see, following two machines are pre-connected
 	  • pre-connected-ubuntu
 	  • pre-connected-winvm
 
-	![](./images/azure-arc-1779.png)
+      ![](./images/azure-arc-1779.png)
 
 3.	Click on one of the pre-connected machines.
 
-	![](./images/azure-arc-1991.png) 
+      ![](./images/azure-arc-1991.png) 
 
 4.	From here, you can **manage** and **govern** your machines with **Manage access** and **Assess compliance**. You will explore on that next exercises.
 
@@ -213,7 +214,7 @@ In this task, we will connect the Linux machine to Azure Arc.
 2.	These commands will open a putty session and login to the Linux machine and run the Azure Arc connect commands automatically. Once the machine is onboarded to Azure you can see the following message in putty terminal:
 info msg= “Successfully Onboarded Resource to Azure”
 
-![](./images/azure-arc-1332.png)
+ ![](./images/azure-arc-1332.png)
  
 ## Exercise 4: Azure Governance for Arc Connected Machine
 # Task 1: RBAC + Security
@@ -364,6 +365,8 @@ Optional initiatives to try… repeat the steps above to test some other policie
 •	TLS 1.2 monitoring => part of PCI DSS (data security standard)
 16.	You can check your server is compliant or not against **“[Preview]: Configure time zone on Windows machines”** policy you assigned in previous step. Click on the policies from winvm options from left hand pane and then look for **Compliance** state. You can see **winvm** is compliant against this policy.
 
+![](./images/azure-arc-3337.png)
+
 
 **Note**: If you find **winvm non-compliant** means time zone of winvm is different from the time zone you provided in policy. You can change the time zone of winvm using following script and after sometime you will see the winvm complaint state changed to **Compliant**
 
@@ -371,115 +374,23 @@ Optional initiatives to try… repeat the steps above to test some other policie
 1.	Open the Azure portal page. Click on this link to go to the Azure ARC machine(s) you have built
 2.	Click on your machine that you want to tag
 
+![](./images/azure-arc-3338.png)
+
 3.	After clicking on it, Click on **Tags** in the center blade
+
+![](./images/azure-arc-3339.png)
 
 4.	Create the following tags, for owner enter your Azure account unique id and then Save them
 
 5.	After saving them they should look like this
+![](./images/azure-arc-4441.png)
 
 # Task 4: Activity Logs
 In last task, you added tags to one of the hybrid computes machines, check the activity logs for that.
 1.	In this step, click on the Activity logs, you will see **Write Azure Arc Machines** operation is performed. Expand the operation and click on the one of expanded operation.
 
+![](./images/azure-arc-4442.png)
+
 2.	Now, click on the **Change history (Preview)**, you can see multiple Tags inserted. In same way you can check more **Tags**.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-# Task 1: Apply Policy
-1.	From the **Machine -Azure Arc** menu for the Hybrid Server you are working with, click on **Policies**
-
-	![](./images/azure-arc-1788.png)
- 
-2.	Click **Assign Initiative**
-
-	![](./images/azure-arc-1789.png)
- 
-3.	To the right of **Basics** click on the ellipses (…) to the right of **Initiative definition**
-
-	![](./images/azure-arc-1790.png)
- 
-4.	In the **Search** window for available definitions, type “Time ” and select the one called **Show Audit results from Windows VMs that are not set to the specified time zone**.  Click the blue **Select** button below
-
-	![](./images/azure-arc-1791.png)
- 
-5.	Click **Next** at the bottom of the window.
-
-	![](./images/azure-arc-1792.png)
- 
-6.	From the **Time zone** drop down menu select **“(UTC) Coordinated Universal Time”**. Click **Next**
-7.	Read the description and then select the checkbox for **Create a remediation task**. This ensures that the policy will apply to existing resources after the policy is assigned.  If that box is not selected, then the policy only applies to newly created resources.
-8.	Select the **Create a Managed Identity** check box and the click **Next** again
-
-	![](./images/azure-arc-1793.png)
- 
-9.	Then at the bottom of the **Assign Policy** window click on **Create**.
-
-	![](./images/azure-arc-1994.png)
- 
-10.	Click on the new initiative just created **Audit Windows VMs that are not set to the specified time zone**
-11.	Click **Create a Remediation Task** at the top right.
-
-	![](./images/azure-arc-1992.png)
-
- 12.	Confirm that the **Scope** is showing the correct Resource Group – should default to …/ARC
-
-        ![](./images/azure-arc-1993.png)
-       
-   o  Click on the **ellipses** …to the right to select all options to include the server as shown to the right
-
-
-13.	Select the Checkbox beneath **Re-evaulate resource compliance before remediating**
-14.	In the Locations drop-down list, select the location where you installed your ARC Server
-o	If you are not sure or can’t remember, look on the **Overview** window for your server
-15.	Click **Remediate** at the bottom of the **New Remediation Task** window
-In the next window at the bottom you will see a blue circle beside **Evaluating**. When it is successful and completed, the circle will turn green and it will say **Complete**. NOTE: if you had many ARC servers, you could evaluate the all at once but changing the scope to select one of more locations or all within a subscription.
-Optional initiatives to try… repeat the steps above to test some other policies such as:
-**Operational compliance**
-•	Micro-segmentation to ensure servers are connected to the right network (remote host connection status doesn't match the specified one)
-•	Certificate about to expire
-•	Application installed: ensure backup is installed
-•	Machines are not restarted after 45 days, indicator that it has been forgotten, running but not used
-**Security compliance**
-•	Password policy
-•	Application installed or not installed (like diagnostic tools used for investigation, but make sure it is removed after troubleshooting)
-•	TLS 1.2 monitoring => part of PCI DSS (data security standard)
-
-## Task 2: Tag your ARC server
-1.	Open the Azure portal page. Click on this link to go to the Azure ARC machine(s) you have built
-2.	Click on your machine that you want to tag
-
-	![](./images/azure-arc-1881.png)
- 
-3.	After clicking on it, Click on **Tags** in the center blade
-4.	Create the following tags and then Save them
-Name	Value
-ARCServerType	Windows
-CostCenter	IT
-Department	Central IT
-Owner 	<your name>
-5.	After saving them they should look like this…
-	
-	![](./images/azure-arc-1885.png)
-
-## Task 3: Activity Logs
-## Task 4: RBAC
+![](./images/azure-arc-4443.png)
