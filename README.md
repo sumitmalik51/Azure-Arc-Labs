@@ -243,9 +243,39 @@ Security best practices specify that a user should be given the lowest permissio
 }
 	2.	Once you save the file, it will look like below.
 	
-	![](./images/azure-arc-1222.png)
+![](./images/azure-arc-1222.png)
 
-	
+3.	Run the PowerShell commands to create a role definition.
+#Import Creds
+CD C:\LabFiles
+$credsfilepath = ".\creds.txt"
+$creds = Get-Content $credsfilepath | Out-String | ConvertFrom-StringData
+
+$AppID = "$($creds.AppID)"
+$AppSecret = "$($creds.AppSecret)"
+$TenantID = "$($creds.TenantID)"
+$SubscriptionId = "$($creds.SubscriptionId)"
+$passwd = ConvertTo-SecureString $AppSecret -AsPlainText -Force
+$pscredential = New-Object System.Management.Automation.PSCredential($AppID, $passwd)
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
+New-AzRoleDefinition -InputFile .\ServerAuditor.json
+
+
+
+4.	Now, go to your resource group in Azure portal and click on **Access control (IAM)** and then click on **+ Add** button to assign the role to self which you just created.
+
+
+5.	Now, click on Add role assignment.
+
+6.	Click on **Select a role** and search for **Server Auditor** and select it from the list.
+
+7.	Now, in Select option search for your azure account, click on that and then select the save button to assign the Server Auditor role to self.
+
+8.	Once the role assignment succeed you will see the notification popup.
+
+9.	You can review the role assigned to self by going to **Role assignments**.
+
+
 
 	
 
