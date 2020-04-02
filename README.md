@@ -290,6 +290,63 @@ New-AzRoleDefinition -InputFile .\ServerAuditor.json
 
 ![](./images/azure-arc-1551.png)
 
+# Task 2: Apply Policy
+Policies can be applied to ARC servers the same way they are applied to Microsoft Azure virtual machines. Policies can be applied to ensure the Azure resources are compliant with established practices such as ensuring that all resources are tagged with an owner. Initiatives can be applied to ensure the server operating systems are compliant such as ensuring the time zone is set correctly on a Microsoft Windows server or a software package is installed on a Linux server. The initiatives use a publish policy to deploy a configuration requirement and an audit policy to check if the requirement has been met.
+
+1.	From the **Machine -Azure Arc** menu for the Hybrid Server you are working with, click on **Policies**
+
+2.	Click **Assign policy**.
+
+3.	To the right of **Basics** click on the ellipses (…) to the right of **Initiative definition**.
+
+4.	In the **Search** window for available definitions, type “Time ” and select the one called **Show Audit results from Windows VMs that are not set to the specified time zone**.  Click the blue **Select** button below.
+
+5.	Click **Next** at the bottom of the window.
+
+6.	From the **Time zone** drop down menu select **“(UTC) Coordinated Universal Time”**. Click **Next**
+7.	Read the description and then select the checkbox for Create a remediation task. This ensures that the policy will apply to existing resources after the policy is assigned.  If that box is not selected, then the policy only applies to newly created resources.
+8.	Select the **Create a Managed Identity** check box and the click **Next** again
+
+9.	Then at the bottom of the **Assign Policy** window click on **Create**. 
+
+10.	Click on the new policy just created **Audit Windows VMs that are not set to the specified time zone**
+11.	Click **Create a Remediation Task** at the top right
+
+12.	Confirm that the **Scope** is showing the correct Resource Group – should default to …/ARC
+a.	Click on the **ellipses** …to the right to select all options to include the server as shown to the right
+
+13.	Select the Checkbox beneath **Re-evaluate resource compliance before remediating**
+14.	In the **Locations** drop-down list, select the location where you installed your ARC Server
+             o	If you are not sure or can’t remember, look on the **Overview** window for your server
+15.	Click **Remediate** at the bottom of the **New Remediation Task** window
+
+
+In the next window at the bottom you will see a blue circle beside **Evaluating**. When it is successful and completed, the circle will turn green and it will say **Complete**. NOTE: if you had many ARC servers, you could evaluate the all at once but changing the scope to select one of more locations or all within a resource group.
+
+
+Optional initiatives to try… repeat the steps above to test some other policies such as:
+
+**Operational compliance**
+•	Micro-segmentation to ensure servers are connected to the right network (remote host connection status doesn't match the specified one)
+
+•	Certificate about to expire
+
+•	Application installed: ensure backup is installed
+
+•	Machines are not restarted after 45 days, indicator that it has been forgotten, running but not used
+
+**Security compliance**
+•	Password policy
+•	Application installed or not installed (like diagnostic tools used for investigation, but make sure it is removed after troubleshooting)
+•	TLS 1.2 monitoring => part of PCI DSS (data security standard)
+16.	You can check your server is compliant or not against **“[Preview]: Configure time zone on Windows machines”** policy you assigned in previous step. Click on the policies from winvm options from left hand pane and then look for **Compliance** state. You can see **winvm** is compliant against this policy.
+
+
+
+
+
+
+
 
 
 	
