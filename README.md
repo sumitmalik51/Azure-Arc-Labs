@@ -222,6 +222,8 @@ Security best practices specify that a user should be given the lowest permissio
 # Custom role
 1.	Save the role definition as ServerAuditor.json to C:\LabFiles directory in ARCHOST VM. You can use Visual studio code or notepad to edit and save the file. Provide the Subscription Id and resourceGroupsName of your lab environment in following custom role definition. You can get the values on lab details page.
 
+  ![](./images/azure-arc-1221.png)
+
 
 
 {
@@ -241,7 +243,8 @@ Security best practices specify that a user should be given the lowest permissio
 }
 	2.	Once you save the file, it will look like below.
 	
-	3.	Run the PowerShell commands to create a role definition.
+	![](./images/azure-arc-1222.png)
+
 	
 
 	
