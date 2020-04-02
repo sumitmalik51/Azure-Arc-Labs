@@ -260,20 +260,35 @@ $pscredential = New-Object System.Management.Automation.PSCredential($AppID, $pa
 Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 New-AzRoleDefinition -InputFile .\ServerAuditor.json
 
+![](./images/azure-arc-1225.png)
+
 
 
 4.	Now, go to your resource group in Azure portal and click on **Access control (IAM)** and then click on **+ Add** button to assign the role to self which you just created.
 
+![](./images/azure-arc-1226.png)
+
 
 5.	Now, click on Add role assignment.
 
+![](./images/azure-arc-1227.png)
+
 6.	Click on **Select a role** and search for **Server Auditor** and select it from the list.
+
+![](./images/azure-arc-1228.png)
 
 7.	Now, in Select option search for your azure account, click on that and then select the save button to assign the Server Auditor role to self.
 
+![](./images/azure-arc-1229.png)
+
 8.	Once the role assignment succeed you will see the notification popup.
 
+![](./images/azure-arc-1230.png)
+
+
 9.	You can review the role assigned to self by going to **Role assignments**.
+
+![](./images/azure-arc-1551.png)
 
 
 
