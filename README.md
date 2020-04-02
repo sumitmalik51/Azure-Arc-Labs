@@ -365,6 +365,30 @@ Optional initiatives to try… repeat the steps above to test some other policie
 16.	You can check your server is compliant or not against **“[Preview]: Configure time zone on Windows machines”** policy you assigned in previous step. Click on the policies from winvm options from left hand pane and then look for **Compliance** state. You can see **winvm** is compliant against this policy.
 
 
+**Note**: If you find **winvm non-compliant** means time zone of winvm is different from the time zone you provided in policy. You can change the time zone of winvm using following script and after sometime you will see the winvm complaint state changed to **Compliant**
+
+# Task 3: Tag your ARC server
+1.	Open the Azure portal page. Click on this link to go to the Azure ARC machine(s) you have built
+2.	Click on your machine that you want to tag
+
+3.	After clicking on it, Click on **Tags** in the center blade
+
+4.	Create the following tags, for owner enter your Azure account unique id and then Save them
+
+5.	After saving them they should look like this
+
+# Task 4: Activity Logs
+In last task, you added tags to one of the hybrid computes machines, check the activity logs for that.
+1.	In this step, click on the Activity logs, you will see **Write Azure Arc Machines** operation is performed. Expand the operation and click on the one of expanded operation.
+
+2.	Now, click on the **Change history (Preview)**, you can see multiple Tags inserted. In same way you can check more **Tags**.
+
+
+
+
+
+
+
 
 
 
