@@ -198,6 +198,7 @@ We will use the 2nd method to connect our windows machine to Azure.
      •	Resource group name
      
      •	Subscription and tenant id
+     
 After getting these values, it is creating pscredential to login in Azure PowerShell using service principle and then, creating a script block to run that block inside the Hyper-V machine. Script block will install the Arc agent package inside vm and connect with Azure Arc. Script block is getting executed remotely with Invoke command from ARC-Host vm with computer name/private ip of WinVm.
 ## Task 3: Connect a Linux Virtual Machine to Arc
 In this task, we will connect the Linux machine to Azure Arc. 
