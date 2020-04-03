@@ -86,9 +86,6 @@ You apply tags to your Azure resources, resource groups, and subscriptions to lo
 
    ![](./images/azure-arc-1712891.png)
         
-        
- 
-
 ## Task 4: Azure Policies
 Azure Policy is a service in Azure that you use to create, assign, and manage policies. These policies enforce different rules and effects over your resources, so those resources stay compliant with your corporate standards and service level agreements. Azure Policy meets this need by evaluating your resources for non-compliance with assigned policies. All data stored by Azure Policy is encrypted at rest.
 1.	Go to your resource group and click on the **Policies** under **Settings**. Click on **Compliance** and then check if there is any assignment on current scope. New policy assignments can be done through **Assign policy** and **Assign Initiative** options, Initiative can be a group of policies. Click on **Assign policy**
@@ -96,8 +93,6 @@ Azure Policy is a service in Azure that you use to create, assign, and manage po
 
    ![](./images/azure-arc-1770.png)
 
-
- 
 
 2.	On **Basics** tab, click on the three dot’s (ellipses) to select the existing policy definition.
 
@@ -223,9 +218,7 @@ Security best practices specify that a user should be given the lowest permissio
 # Custom role
 1.	Save the role definition as ServerAuditor.json to C:\LabFiles directory in ARCHOST VM. You can use Visual studio code or notepad to edit and save the file. Provide the Subscription Id and resourceGroupsName of your lab environment in following custom role definition. You can get the values on lab details page.
 
-  ![](./images/azure-arc-1221.png)
-
-
+ ![](./images/azure-arc-1221.png)
 
 {
     "Actions": [
@@ -244,7 +237,7 @@ Security best practices specify that a user should be given the lowest permissio
 }
 	2.	Once you save the file, it will look like below.
 	
-  ![](./images/azure-arc-1222.png)
+   ![](./images/azure-arc-1222.png)
 
 3.	Run the PowerShell commands to create a role definition.
 #Import Creds
@@ -262,8 +255,6 @@ Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 New-AzRoleDefinition -InputFile .\ServerAuditor.json
 
   ![](./images/azure-arc-1225.png)
-
-
 
 4.	Now, go to your resource group in Azure portal and click on **Access control (IAM)** and then click on **+ Add** button to assign the role to self which you just created.
 
@@ -331,7 +322,7 @@ Policies can be applied to ARC servers the same way they are applied to Microsof
 
 12.	Confirm that the **Scope** is showing the correct Resource Group – should default to …/ARC
 
-    ![](./images/azure-arc-3333.png)
+   ![](./images/azure-arc-3333.png)
 
 a.	Click on the **ellipses** …to the right to select all options to include the server as shown to the right
 
@@ -340,12 +331,12 @@ a.	Click on the **ellipses** …to the right to select all options to include th
              o	If you are not sure or can’t remember, look on the **Overview** window for your server
 15.	Click **Remediate** at the bottom of the **New Remediation Task** window
 
-     ![](./images/azure-arc-3335.png)
+   ![](./images/azure-arc-3335.png)
 
 
 In the next window at the bottom you will see a blue circle beside **Evaluating**. When it is successful and completed, the circle will turn green and it will say **Complete**. NOTE: if you had many ARC servers, you could evaluate the all at once but changing the scope to select one of more locations or all within a resource group.
 
-  ![](./images/azure-arc-3336.png)
+   ![](./images/azure-arc-3336.png)
 
 
 Optional initiatives to try… repeat the steps above to test some other policies such as:
@@ -389,8 +380,8 @@ Optional initiatives to try… repeat the steps above to test some other policie
 In last task, you added tags to one of the hybrid computes machines, check the activity logs for that.
 1.	In this step, click on the Activity logs, you will see **Write Azure Arc Machines** operation is performed. Expand the operation and click on the one of expanded operation.
 
-   ![](./images/azure-arc-4442.png)
+    ![](./images/azure-arc-4442.png)
 
 2.	Now, click on the **Change history (Preview)**, you can see multiple Tags inserted. In same way you can check more **Tags**.
 
-   ![](./images/azure-arc-4443.png)
+    ![](./images/azure-arc-4443.png)
